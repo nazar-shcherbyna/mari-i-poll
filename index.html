@@ -15,6 +15,7 @@
 <body>
  
     <div class="mip">
+        <p class="mip__logo--ham">Mari i Poll</p>
         <nav class="mip__nav">
             <div class="mip__logo">
                 <img src="img/mip-logo.png" alt="">
@@ -33,9 +34,9 @@
                 <p class="mip__name--ham">Mari i Poll</p>
                 <div class="mip__links--ham">
                     <ul>
-                        <li><a href="catalog.html">Каталог</a></li>
-                        <li><a href="#mip-about-us">О нас</a></li>
-                        <li><a href="#contact">Контакты</a></li>
+                        <li><a class="hum-link" href="#" onclick="closeMenu()">Каталог</a></li>
+                        <li><a class="hum-link" href="#mip-about-us" onclick="closeMenu()">О нас</a></li>
+                        <li><a class="hum-link" href="#contact" onclick="closeMenu()">Контакты</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,17 +49,17 @@
         </div>
         <section class="mip__main">
             <div class="mip__protect">
-                <div class="mip__protect-item">
+                <div class="mip__protect-item mip__protect-item--l">
                     <div>Игрушки с натуральным наполнением</div>
                     <div><i class="fas fa-building"></i></div>
                 </div>
-                <div class="mip__protect-item">
+                <div class="mip__protect-item mip__protect-item--r">
                     <div>Производство в Мариуполе</div>
                     <div><i class="fas fa-globe-europe"></i></div>
                 </div>
             </div>
         </section>
-        <section class="mip__gallery container">
+        <section class="mip__gallery container" id="mip-about-us">
             <h2>Наши работы</h2>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
