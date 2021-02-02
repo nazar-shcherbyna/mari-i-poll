@@ -51,6 +51,7 @@ html {
         color: #1086B0;
         background-color: #fff;
         width: 80%;
+        border-radius: 10px;
         display: flex;
         @media screen and (max-width: 992px) {
             display: block;
@@ -78,21 +79,24 @@ html {
         @media screen and (max-width: 576px) {
             font-size: 2rem;
             height: 150px;
+            left: 0;
+            padding: 10px 15px;
+            margin: 15px auto;
         }
     }
-    &__protect-item--l {
-        margin-right: 15px;
-        @media screen and (max-width: 992px) {
-            margin-right: 0;
-        }
-    }
-    &__protect-item--r {
-        margin-left: 15px;
-        @media screen and (max-width: 992px) {
-            margin-left: 0;
-            margin: 30px;
-        }
-    }
+    // &__protect-item--l {
+    //     margin-right: 15px;
+    //     @media screen and (max-width: 992px) {
+    //         margin-right: 0;
+    //     }
+    // }
+    // &__protect-item--r {
+    //     margin-left: 15px;
+    //     @media screen and (max-width: 992px) {
+    //         margin-left: 0;
+    //         margin: 30px;
+    //     }
+    // }
     &__nav {
         position: fixed;
         z-index: 10;
@@ -164,15 +168,20 @@ html {
             margin-top: 200px;
         }
         h2 {
-            margin: 0;
             height: 10vh;
-            padding: 10px;
-            text-align: center;
-            color: #1086B0;
-            font-size: 2.5rem;
-            font-weight: 700;
         }
     }
+}
+
+.h2 {
+    color: #1086B0;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 5px;
+    font-size: 4rem;
 }
 
 .fas {
@@ -218,11 +227,7 @@ html {
     margin-top: 50px;
     padding: 0 30px;
     &__h2 {
-        margin: 0;
-        text-align: center;
-        padding: 50px 0 10px;
-        font-weight: 700;
-        font-size: 4.5rem;
+        // padding: 50px 0 10px;
         @media screen and (max-width: 768px) {
             font-size: 3.6rem;
             padding: 30px 0 10px;
@@ -260,6 +265,7 @@ html {
         padding: 15px 0;
         margin-bottom: 20px;
         font-size: 2rem;
+        border-radius: 5px;
         &:hover {
             cursor: pointer;
             box-shadow: 0 0 3px rgba(0, 108, 196, 0.8);
@@ -278,6 +284,7 @@ html {
     border: none;
     outline: none;
     margin-bottom: 15px;
+    border-radius: 5px;
     color: #006cc4;
     background-color: #fff;
     font-size: 2rem;
@@ -348,6 +355,7 @@ html {
 #map {
     height: 300px;
     width: 100%;
+    border-radius: 5px;
 }
 
 .mip__hamburger {
@@ -417,15 +425,15 @@ html {
 
 .humburger {
     display: block;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 50;
     overflow: hidden;
     margin: 0;
     padding: 0;
-    width: 96px;
-    height: 96px;
+    width: 80px;
+    height: 80px;
     font-size: 0;
     border: none;
     box-shadow: none;
@@ -439,10 +447,10 @@ html {
 .humburger span {
     display: block;
     position: absolute;
-    top: 44px;
-    left: 18px;
-    right: 18px;
-    height: 8px;
+    top: 37px;
+    left: 14px;
+    right: 14px;
+    height: 6px;
     border-radius: 5px;
     background-color: #fff;
 }
@@ -454,7 +462,7 @@ html {
     display: block;
     left: 0;
     width: 100%;
-    height: 8px;
+    height: 6px;
     border-radius: 5px;
     background: #fff;
 }
@@ -467,14 +475,16 @@ html {
     bottom: -20px;
 }
 
-.humburger-line{
-    background-color: rgb(45, 240, 197);
+.humburger-line {
+    background-color: transparent;
 }
 
+.humburger-line span,
 .humburger-line span::before, 
 .humburger-line span::after {
     transition-duration: .3s, .3s;
     transition-delay: .3s, 0s;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
 .humburger-line span::before {
@@ -485,11 +495,9 @@ html {
     transition-property: bottom, transform;
 }
 
-.humburger-line.is-active {
-    background: rgb(136, 255, 0);
-}
-
 .humburger-line.is-active span {
+    box-shadow: none;
+    transition: box-shadow .1s ease;
     background: none;
 }
 
