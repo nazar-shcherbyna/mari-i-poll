@@ -27,7 +27,7 @@ function initMap() {
         lng: 37.55897540422409 
     };
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 16,
+      zoom: 15,
       center: myLatLng,
     });
     var iconBase = 'img/';
