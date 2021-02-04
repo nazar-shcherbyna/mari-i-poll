@@ -69,20 +69,34 @@ mipName.addEventListener('click', () => {
   console.log(mipName.getBoundingClientRect().bottom)
 })
 
-document.addEventListener('scroll', function showLittleName() {
-  if (mipName.getBoundingClientRect().bottom <= 20) {
-    mipLittleName.classList.add('show');
-  }
-  if (mipName.getBoundingClientRect().bottom > 20) {
-    mipLittleName.classList.remove('show');
-  }
-})
+// document.addEventListener('scroll', function showLittleName() {
+//   if (mipName.getBoundingClientRect().bottom <= 20) {
+//     mipLittleName.classList.add('show');
+//   }
+//   if (mipName.getBoundingClientRect().bottom > 20) {
+//     mipLittleName.classList.remove('show');
+//   }
+// })
 
-document.addEventListener('scroll', function showLittleName() {
-  if (mipName.getBoundingClientRect().bottom <= 20) {
-    mipHumName.classList.add('show');
-  }
-  if (mipName.getBoundingClientRect().bottom > 20) {
-    mipHumName.classList.remove('show');
-  }
-})
+// document.addEventListener('scroll', function showLittleName() {
+//   if (mipName.getBoundingClientRect().bottom <= 20) {
+//     mipHumName.classList.add('show');
+//   }
+//   if (mipName.getBoundingClientRect().bottom > 20) {
+//     mipHumName.classList.remove('show');
+//   }
+// })
+
+function showName(elem, showElem) {
+  document.addEventListener('scroll', function () {
+    if (elem.getBoundingClientRect().bottom <= 20) {
+      showElem.classList.add('show');
+    }
+    if (elem.getBoundingClientRect().bottom > 20) {
+      showElem.classList.remove('show');
+    }
+  })
+}
+
+showName(mipName, mipHumName);
+showName(mipName, mipLittleName);

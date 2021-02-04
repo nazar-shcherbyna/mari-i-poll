@@ -125,7 +125,6 @@ html {
         margin: 10px 0;
         color: #fff;
         opacity: 0;
-        transition: all .3s ease;
         text-shadow: 0 0 1px rgba(21, 127, 197, 0.753);
     }   
     &__logo--ham {
@@ -136,14 +135,13 @@ html {
         @media screen and (max-width: 768px) {
             display: block;
             position: fixed;
-            z-index: 8;
+            z-index: 7;
             text-align: center;
             width: 100%;
             top: 0;
             color: #fff;
             margin: 10px;
             opacity: 0;
-            transition: all .3s ease;
         }
     }
     &__links {
@@ -179,7 +177,6 @@ html {
 
 .show {
     opacity: 1;
-    transition: all .3s ease;
 }
 
 .h2 {
@@ -532,9 +529,9 @@ html {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #00319c;
     color: #fff;
-    padding: 0 50px;
+    padding: 0 30px;
+    background-color: #00319c;
     @media screen and (max-width: 992px) {
         display: block;
         text-align: center;
