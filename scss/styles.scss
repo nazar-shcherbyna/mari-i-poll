@@ -39,7 +39,7 @@ html {
             padding-top: 200px;
             @media screen and (max-width: 576px) {
                 font-size: 6rem;
-                padding: 200px 10px 0;
+                padding: 150px 10px 0;
             }
         }
     }
@@ -136,7 +136,7 @@ html {
         @media screen and (max-width: 768px) {
             display: block;
             position: fixed;
-            z-index: 3;
+            z-index: 8;
             text-align: center;
             width: 100%;
             top: 0;

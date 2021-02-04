@@ -85,16 +85,4 @@ document.addEventListener('scroll', function showLittleName() {
   if (mipName.getBoundingClientRect().bottom > 20) {
     mipHumName.classList.remove('show');
   }
-}) 
-// function showName(elem, showElem) {
-//     if (elem.getBoundingClientRect().bottom <= 20) {
-//       showElem.classList.add('show');
-//     }
-//     if (elem.getBoundingClientRect().bottom > 20) {
-//       showElem.classList.remove('show');
-//     }
-// };
-
-var top = mipName.getBoundingClientRect().top + document.body.scrollTop;
-
-console.log(top)
+})
